@@ -16,6 +16,6 @@ What i did is:
 ```
 _C = _M^_D mod _N
 ```
-10. set out the final bytes in the **RSAEnk** variable from the chipertext.
+10. set out the final bytes in the **RSAEnk** variable from the chipertext with **_BigOutBytes**.
 11. then for the whole RSA encryption i've applied the **Base64** encoding scheme and inserted it between the **dqma** and **amqd** parts.
 12. set the final serial on the serial field with **SetDlgItemText** then cleaned all the buffers with **RtlZeroMemory** and **_BigDestroy**.
