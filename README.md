@@ -11,7 +11,7 @@ What i did is:
 5. added '7' to the beginning of algo (**mov byte ptr [RSAEnk],7**) , the app label (**OEE**), the name buffer, 01h, the license type (**10000** - which is for the unlimited site license), 01h, the custom string ( since the new version of OEE's algo has barely changed, this can be any string besides the expiration date like i said through the comment - i know it's actually a misheard lyric from the song from Peter Pan that came in my mind after watching [Stevie T's videos :)))](https://www.youtube.com/watch?v=QynJ0NKa1p4&t=412s) ) , and then concatenated all of these altogether to **RSAEnk** variable.
 6. used the biglib library and initialized big numbers with _BigCreate for the **_N** (modulus), **_D** (private key exponent), **_M** (padded plaintext), and **_C** (final chipertext - or the final encrypted string).
 7. set the modulus and the private exponent with **_BigIn** and then calculated the length of the **RSAEnk** variable with **lstrlen**.
-8. set 256 bytes for the **_M** plaintext with **BigInBytes**.
+8. set 256 bytes for the **_M** plaintext with **_BigInBytes**.
 9. did the modular arithmetic calculation with **_BigPowMod** to finalize the string encryption (derived from **RSAEnk**) for the **_C** variable (chipertext):
 ```
 _C = _M^_D mod _N
